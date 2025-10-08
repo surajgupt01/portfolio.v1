@@ -8,14 +8,14 @@ const textAreaRef = useRef(null)
 
 
     return(
-        <div className="flex justify-center items-center flex-col relative h-140   p-4 ">
+        <div className="flex justify-center items-center flex-col relative  p-4  ">
 
 
-            <div className="flex border-1 border-gray-700 p-2 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 top-0">
+            <div className="flex border-1 border-gray-700 p-2 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 -top-20">
                <ContactNav/>
-            </div>
+            </div> 
            
-           <div className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-600  sm:w-120 w-90 ">
+           <div className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-600  sm:w-120  ">
 
               <div className="mb-2 text-gray-600 font-semibold">Mail me</div>
                <input placeholder="name" className="w-85 sm:w-100  border-1 rounded-sm p-2 border-gray-700 "></input>

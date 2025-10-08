@@ -9,12 +9,14 @@ export default function Projects() {
   }
 
   return (
-    <div className="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-3 p-2 sm:p-8 text-left justify-between w-full text-xs relative">
+    <div className="w-full h-full overflow-auto ">
+      
+      <div className="w-full h-full mt-30 sm:mt-0 grid grid-cols-1  sm:grid-cols-3 gap-3  sm:p-8 text-left justify-between  text-xs relative overflow-auto  p-3 ">
       {/* <p className='text-lg font-semibold mt-8'> Projects:</p> */}
 
       {ProjectsDescription.map((e) => (
         <div
-          className=" border-1 border-gray-800 p-4 rounded-sm cursor-pointer hover:border-gray-600 duration-300 ease-in-out h-90 sm:h-85"
+          className=" border-1 border-gray-800 p-4 rounded-sm cursor-pointer hover:border-gray-600 duration-300 ease-in-out h-90 sm:h-85 "
           key={e.title}
         >
           <div className="flex scale-75 w-30 justify-between items-center mb-2 ">
@@ -40,6 +42,7 @@ export default function Projects() {
           <div className="text-gray-600 mt-2 text-left">{e.description}</div>
         </div>
       ))}
+      </div>
     </div>
   );
 }

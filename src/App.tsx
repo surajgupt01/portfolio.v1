@@ -25,14 +25,14 @@ function App() {
 
   return (
     <>
-     <div className='h-screen bg-neutral-900 text-white flex  flex-col sm:flex-row  justify-center items-center  '>
+     <div className='h-screen w-full bg-black text-white flex  flex-col sm:flex-row  justify-center items-center p-2  '>
        
        {/* <button onClick={()=>{
          console.log('button clicked')
          setMenu(!menu)
        }} className='absolute top-5 left-5 z-100'>==</button> */}
 
-      <div className={`p-4 duration-300   z-100 sm:w-50 w-[85%] mt-5 rounded-lg sm:border-0 border-1 border-gray-400   `}>
+      <div className={`p-4 duration-300 sm:static fixed backdrop-blur-xl top-0   z-100 sm:w-50 w-[85%] mt-5 rounded-lg sm:border-0 border-1 border-gray-400   `}>
          <ul className='sm:grid sm:grid-cols-1 flex justify-evenly  items-center text-gray-400 '>
           {
             menuList.map((item)=>(
@@ -55,7 +55,7 @@ function App() {
 
 
 
-<div className={` sm:w-220 md:ml-5 h-screen   flex justify-center items-center   ${router ? '' : ''} w-full `}>
+<div className={` sm:w-220 md:ml-5 h-screen   flex justify-center  items-center   ${router ? '' : ''} w-full `}>
 
 
 { router == 'About' &&  <About/>}
