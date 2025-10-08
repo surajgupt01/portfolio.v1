@@ -4,7 +4,7 @@ import { blogs } from "./BlogsItems"
 export default function Blogs(){
     return(
 
-        <div className="flex justify-center p-4 h-190 overflow-auto scrollbar-hide w-full ">
+        <div className="flex justify-center p-4 h-190 overflow-auto scrollbar-hide w-full sm:pt-2 pt-6 ">
           <div className="scroll-smooth  p-2  overflow-auto scrollbar-hide sm:h-150 h-full w-full overflow-x-hidden flex flex-col items-center ">
               {
                 blogs.slice().reverse().map((e:string)=>(
