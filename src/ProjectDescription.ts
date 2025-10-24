@@ -1,13 +1,13 @@
 export const ProjectsDescription = [
   {
-    title: `Form Builder`,
-    description: `– Developing a website to create custom forms for non-tech people.
-– Tech Stack: ReactJS, JavaScript, NodeJS, ExpressJS, MongoDB.
+    title: `Invoice Generator`,
+    description: `– Developing a website to create custom invloices for non-tech people.
+– Tech Stack: NextJs, JavaScript, NodeJS, ExpressJS, Postgresql, AuthJs.
 In Production`,
 
-    link: "",
-    github: "https://github.com/surajgupt01/FormBuilder",
-    liveLink: "https://github.com/surajgupt01/FormBuilder",
+    link: "./assets/Screenshot 2025-10-24 142558.png",
+    github: "https://github.com/surajgupt01/Invo-Gen",
+    liveLink: "https://invo-gen-nine.vercel.app/",
   },
 
   {
