@@ -28,13 +28,15 @@ export default function Blogs(){
               {blogs.map((e,index)=>(
              
                 
-                <div className="border-1 p-4 border-gray-700 hover:border-gray-500 rounded-md w-65 h-80 m-4 cursor-pointer" onClick={()=>{
+                <div className="relative border-1 p-4 border-gray-700 hover:border-gray-500 rounded-md w-65 h-85 m-4 cursor-pointer group " onClick={()=>{
                     setBlog(index)
                     console.log(index)
                 }}>
-                    <div className="border-1 border-gray-500 h-35 rounded-md"></div>
-                    <div className="text-sm mt-5">{e.title}</div>
-                    <div className="text-sm text-gray-500 mt-2">{e.Intro}</div>
+                    <div className=" border-gray-500 h-35 rounded-md"><img src={e.link} className="opacity-50 group-hover:opacity-70 rounded-sm"></img></div>
+                    <div className=" backdrop-blur-sm group-hover:backdrop-blur-xs duration-100 bg-black/10 p-2 w-full h-auto overflow-hidden   text-white z-10">
+                    <div className="text-sm mt-5 text-white ">{e.title}</div>
+                    <div className="text-sm text-gray-200 mt-2">{e.Intro}</div>
+                    </div>
                 </div>
               ))}
 

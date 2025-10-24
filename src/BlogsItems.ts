@@ -2,7 +2,8 @@ interface BlogsProps {
   id : number,
   title: string;
   Intro: string;
-  description: string;
+  description: string,
+  link : string
 }
 
 export const blogs: BlogsProps[] = [
@@ -23,7 +24,11 @@ However, as I got more into development, I realized that writing scalable and ef
 For a while, I kept switching between development and DSA, not realizing how connected they are. Now, I understand that mastering DSA helps me think logically, write optimized backend logic, and design systems that scale.
 
 Right now, I’m focused on improving my DSA skills while still building projects that challenge me technically. For me, full-stack development isn’t just about writing code — it’s about understanding how systems grow, communicate, and perform under pressure. That’s what keeps me excited every day.`,
-  },
+ link : './assets/torn-posters.jpg'  
+
+},
+
+
 
   {
     id: 2,
@@ -50,7 +55,9 @@ This journey is also helping me connect the dots between frontend and backend
 — understanding how authentication flows through APIs, cookies, and client-side state. Every new feature I implement strengthens my ability to design robust, real-world applications.
 
 I’m excited to keep experimenting and mastering Auth.js, because learning authentication isn’t just a skill — it’s a necessary building block for every serious web developer.`,
-  },
+  
+link : './assets/10542.jpg'
+},
 
 
 
