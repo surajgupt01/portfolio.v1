@@ -38,7 +38,7 @@ export default function Blogs(){
                 </div>
               ))}
 
-             {b >= 0  && <div className="sm:w-180 w-full sm:h-150 sm:top-20 top-30 absolute bg-gray-800/70 backdrop-blur-sm sm:text-md text-sm text-gray-400  p-4 flex flex-col items-center    rounded-lg">
+             {b >= 0  && <div className={`sm:w-180 w-full sm:h-150 sm:top-20 top-30 absolute bg-gray-800/70 backdrop-blur-sm sm:text-md text-sm text-gray-400  p-4 flex flex-col items-center    rounded-lg transition-all duration-1000 ease-in-out transform ${b==-1 ? 'scale-0' : 'scale-100'}`}>
               <div className="w-full flex justify-end" onClick={()=>setBlog(-1)}><Close/></div> 
                <div className="mt-10  h-auto w-auto"> {blogs[b].description}</div>
              </div>}
