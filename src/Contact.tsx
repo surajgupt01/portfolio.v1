@@ -3,13 +3,12 @@ import ContactNav from "./ContactNav";
 import axios from "axios";
 
 export default function Contact() {
-
-  const [status ,setStatus] = useState<number>(0)  
+  const [status, setStatus] = useState<number>(0);
   const handleEmail = async (formData: FormData) => {
     try {
       console.log(formData);
 
-      const response =  await axios.post(
+      const response = await axios.post(
         "https://contact-form-five-rust.vercel.app/get-mail",
 
         {
@@ -23,12 +22,10 @@ export default function Contact() {
         }
       );
 
-      console.log(response)
-      setStatus(response?.status)
+      console.log(response);
+      setStatus(response?.status);
       setTimeout(() => {
-
-        setStatus(0)
-        
+        setStatus(0);
       }, 3000);
     } catch (e) {
       console.log(e);
@@ -38,16 +35,24 @@ export default function Contact() {
   const textAreaRef = useRef(null);
 
   return (
-    <div className="flex justify-center items-center flex-col relative  p-4  ">
-      <div className="flex border-1 border-gray-700 p-2 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 -top-20">
-        <ContactNav />
+    <div className="flex justify-center items-center flex-col relative  sm:p-4 p-2  w-full sm:mt-20 mt-0 ">
+      <div className="w-full p-2 text-center">
+        <h1 className="font-medium text-2xl text-gray-400">Connect with Me</h1>
       </div>
-
-      {status==200 && <div className=" bg-gray-700 absolute -top-32 transition-all ease-in-out duration-500 right-2 p-2 text-xs">mail sent successfully</div>}
-
+      <div className="text-gray-500 font-light italic w-full text-center">
+        Let’s build something impactful together.
+      </div>
+      <div className="flex border-1 border-gray-700 p-2 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 sm:top-20 top-25">
+       <ContactNav />
+      </div>
+      {status == 200 && (
+        <div className=" bg-gray-700 absolute -top-32 transition-all ease-in-out duration-500 right-2 p-2 text-xs">
+          mail sent successfully
+        </div>
+      )}
       <form
         action={handleEmail}
-        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-600  sm:w-120  "
+        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-600  sm:w-120 mt-25  "
       >
         <div className="mb-2 text-gray-600 font-semibold">Mail me</div>
         <input

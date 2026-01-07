@@ -9,40 +9,58 @@ export default function Projects() {
   }
 
   return (
-    <div className="w-full h-full overflow-auto ">
-      
-      <div className="w-full h-full mt-30 sm:mt-0 grid grid-cols-1  sm:grid-cols-3 gap-3  sm:p-8 text-left justify-between  text-xs relative overflow-auto  p-3 ">
-      {/* <p className='text-lg font-semibold mt-8'> Projects:</p> */}
+    <div className="w-full h-full overflow-auto mt-10 ">
+      <div className="border border-dashed border-gray-800 mt-2 mb-2 w-full"></div>
+      <div className="w-full p-2 text-center"><h1 className="font-medium text-2xl text-gray-400">Proof of work</h1></div>
 
-      {ProjectsDescription.map((e) => (
-        <div
-          className=" border-1 border-gray-800 p-4 rounded-sm cursor-pointer hover:border-gray-600 duration-300 ease-in-out h-90 sm:h-85 "
-          key={e.title}
-        >
-          <div className="flex scale-75 w-30 justify-between items-center mb-2 ">
-            <div onClick={() => jumpTab(e.github)}>
-              <Github />
+     <div className="text-gray-500 font-light italic w-full text-center">Real-world projects. I’ve designed, built, and shipped.</div> 
+
+
+      <div className="w-full flex justify-center items-center">
+        <div className="w-[90%] h-full mt-15 sm:mt-0 grid grid-cols-1  sm:grid-cols-2 gap-6  sm:p-8 text-left justify-between  text-xs relative overflow-auto  p-3 ">
+          {/* <p className='text-lg font-semibold mt-8'> Projects:</p> */}
+
+          {ProjectsDescription.map((e) => (
+            <div
+              className=" border-1 border-gray-800 p-4 rounded-sm cursor-pointer hover:border-gray-600 duration-300 ease-in-out h-90 sm:h-80 "
+              key={e.title}
+            >
+              <div className="flex scale-75 w-30 justify-between items-center mb-2 ">
+                <div onClick={() => jumpTab(e.github)}>
+                  <Github />
+                </div>
+
+                <div className="flex text-xs justify-between  ">
+                  <Link />{" "}
+                  <span
+                    className="hover:text-green-400"
+                    onClick={() => jumpTab(e.liveLink)}
+                  >
+                    {" "}
+                    Live view
+                  </span>
+                </div>
+              </div>
+
+              {e.title == "Form Builder" ? (
+                <div className="flex justify-center items-center border-gray-600 rounded-sm w-full h-20 animate-pulse text-xl">
+                  {" "}
+                  Coming soon
+                </div>
+              ) : (
+                <img src={e.link} className="mb-2 rounded-sm"></img>
+              )}
+
+              <p className="font-semibold">{e.title}</p>
+              <div className="text-gray-600 mt-2 text-left">
+                {e.description}
+              </div>
             </div>
-
-            <div className="flex text-xs justify-between  ">
-              <Link />{" "}
-              <span
-                className="hover:text-green-400"
-                onClick={() => jumpTab(e.liveLink)}
-              >
-                {" "}
-                Live view
-              </span>
-            </div>
-          </div>
-
-          {e.title=='Form Builder' ?<div className="flex justify-center items-center border-gray-600 rounded-sm w-full h-20 animate-pulse text-xl"> Coming soon</div> :  <img src={e.link} className="mb-2 rounded-sm"></img>}
-
-          <p className="font-semibold">{e.title}</p>
-          <div className="text-gray-600 mt-2 text-left">{e.description}</div>
+          ))}
         </div>
-      ))}
       </div>
+      <div className="border border-dashed border-gray-800 mt-2 mb-2 w-full"></div>
+
     </div>
   );
 }
