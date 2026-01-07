@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import Projects from "./Projects";
 import About from "./About";
@@ -8,13 +7,13 @@ import Education from "./Education";
 import Experience from "./Experiences";
 
 function App() {
-  const [router, setRouter] = useState<String | null>("About");
+  // const [router, setRouter] = useState<String | null>("About");
 
-  const [menu, setMenu] = useState(false);
+  // const [menu, setMenu] = useState(false);
 
-  const menuList = ["About", "Projects", "Blogs", "Contact me"];
+  // const menuList = ["About", "Projects", "Blogs", "Contact me"];
 
-  useEffect(() => {}, [router]);
+  // useEffect(() => {}, [router]);
 
   return (
     <>
@@ -46,9 +45,7 @@ function App() {
       </div> */}
 
         <div
-          className={` sm:w-180 w-full  md:ml-5 h-auto   flex flex-col justify-center  items-center   ${
-            router ? "" : ""
-          } w-full border-r border-l border-gray-900 sm:p-6 p-2 `}
+          className={` sm:w-180 md:ml-5 h-auto   flex flex-col justify-center  items-center   w-full border-r border-l border-gray-900 sm:p-6 p-2 `}
         >
           {/* { router == 'About' &&  <About/>}
 
@@ -68,8 +65,7 @@ function App() {
         </div>
         <footer>
           <div className="text-gray-400 font-light italic w-full text-center">
-            Designed & developed by me ❤️‍🔥 with lots of ☕
-            <br></br>
+            Designed & developed by me ❤️‍🔥 with lots of ☕<br></br>
             <span className="text-xs">Always learning. Always building</span>
           </div>
         </footer>
