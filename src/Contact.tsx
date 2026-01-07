@@ -52,7 +52,7 @@ export default function Contact() {
       )}
       <form
         action={handleEmail}
-        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-600  sm:w-120 mt-25  "
+        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-600  sm:w-120 sm:mt-25 mt-15 sm:scale-100 scale-78  "
       >
         <div className="mb-2 text-gray-600 font-semibold">Mail me</div>
         <input
