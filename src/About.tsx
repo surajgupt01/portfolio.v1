@@ -63,7 +63,7 @@ export function Hero() {
         {/* Subheading */}
         <p className="sm:text-sm text-[11px] text-gray-700  leading-loose">
           Full-stack developer specializing in{" "}
-          <span className="font-medium text-gray-900 dark:text-white">
+          <span className="font-medium text-gray-900 ">
             Next.js, Node.js, Prisma, and modern databases
           </span>
           .
