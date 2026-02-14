@@ -9,8 +9,9 @@ export default function ContactNav() {
   return (
     <>
       <div
+        
         onClick={() => jumpTab("mailto:surajgupt880@gmail.com")}
-        className="cursor-pointer"
+        className="cursor-pointer hover:scale-105 duration-200 ease-in"
       >
         <Mail></Mail>
       </div>
@@ -18,13 +19,13 @@ export default function ContactNav() {
         onClick={() =>
           jumpTab("https://www.linkedin.com/in/suraj-gupta-1894051ba/")
         }
-        className="cursor-pointer"
+        className="cursor-pointer hover:scale-105 duration-200 ease-in"
       >
         <LinkedIn />
       </div>
       <div
         onClick={() => jumpTab("https://github.com/surajgupt01")}
-        className="cursor-pointer"
+        className="cursor-pointer hover:scale-105 duration-200 ease-in"
       >
         <Github />
       </div>

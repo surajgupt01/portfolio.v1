@@ -2,7 +2,7 @@ export default function Education() {
   return (
     <div className="w-full sm:p-4 p-2">
       <div className="w-full p-2 text-left">
-        <h1 className="font-medium text-2xl text-gray-600">Education</h1>
+        <h1 className="font-medium text-2xl text-gray-700">Education</h1>
       </div>
       <div className="w-full flex justify-between items-center  font-semibold mt-4 p-4">
         <div className=" flex  items-start">
@@ -16,8 +16,8 @@ export default function Education() {
             
           </div>
 
-          <div className="text-sm text-gray-400 mt-1 ml-4 font-normal flex flex-col">
-            <span className="sm:text-lg text-md font-semibold text-gray-300">Manipal University Jaipur</span>
+          <div className="text-sm text-gray-500 mt-1 ml-4 font-normal flex flex-col">
+            <span className="sm:text-lg text-md font-semibold text-gray-700">Manipal University Jaipur</span>
             {" "}
             B.Tech in Computer and Communication{" "}
             <span className="text-xs font-light">{" (8.12 CGPA) "}</span>
@@ -29,7 +29,7 @@ export default function Education() {
           <div>2025</div>
         </div>
       </div>
-      <div className="border border-dashed border-gray-800 mt-20 mb-2 w-full"></div>
+      <div className="border border-dashed border-gray-300 mt-20 mb-2 w-full"></div>
     </div>
   );
 }

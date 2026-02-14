@@ -37,12 +37,12 @@ export default function Contact() {
   return (
     <div className="flex justify-center items-center flex-col relative  sm:p-4 p-2  w-full sm:mt-20 mt-0 ">
       <div className="w-full p-2 text-center">
-        <h1 className="font-medium text-2xl text-gray-400">Connect with Me</h1>
+        <h1 className="font-medium text-2xl text-gray-700">Connect with Me</h1>
       </div>
-      <div className="text-gray-500 font-light italic w-full text-center">
+      <div className="text-gray-600 font-light italic w-full text-center">
         Let’s build something impactful together.
       </div>
-      <div className="flex border-1 border-gray-700 p-2 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 sm:top-20 top-25">
+      <div className="flex border-1 border-gray-300 p-2 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 sm:top-20 top-25">
        <ContactNav />
       </div>
       {status == 200 && (
@@ -52,30 +52,30 @@ export default function Contact() {
       )}
       <form
         action={handleEmail}
-        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-600  sm:w-120 sm:mt-25 mt-15 sm:scale-100 scale-78  "
+        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-300  sm:w-120 sm:mt-25 mt-15 sm:scale-100 scale-78  "
       >
         <div className="mb-2 text-gray-600 font-semibold">Mail me</div>
         <input
           name="name"
           placeholder="name"
           type="text"
-          className="w-85 sm:w-100  border-1 rounded-sm p-2 border-gray-700 "
+          className="w-85 sm:w-100  border-1 rounded-sm p-2 border-gray-300 focus:outline-gray-400 "
         ></input>
         <input
           name="email"
           placeholder="email"
           type="email"
-          className="w-85 sm:w-100 border-1 border-gray-700 rounded-sm p-2 mt-2"
+          className="w-85 sm:w-100 border-1 border-gray-300 focus:outline-gray-400  rounded-sm p-2 mt-2"
         ></input>
         <textarea
           name="message"
           placeholder="message "
-          className="border-1 border-gray-700 w-85 sm:w-100 h-50 p-2 resize-none rounded-sm mt-2 scrollbar-hide"
+          className="border-1 border-gray-300 focus:outline-gray-400  w-85 sm:w-100 h-50 p-2 resize-none rounded-sm mt-2 scrollbar-hide"
           ref={textAreaRef}
         ></textarea>
         <button
           type="submit"
-          className="bg-blue-700 hover:bg-blue-800 w-80 border-1 border-black rounded-md text-center p-2 mt-4 cursor-pointer"
+          className="bg-blue-500 hover:bg-blue-600 w-80 border-1  rounded-md text-center p-2 mt-4 cursor-pointer text-white"
         >
           submit
         </button>

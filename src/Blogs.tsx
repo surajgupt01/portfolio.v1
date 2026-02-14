@@ -7,7 +7,7 @@ export default function Blogs() {
   return (
     <div className="relative flex flex-col justify-center  p-6  overflow-auto scrollbar-hide w-full  h-auto   ">
       <div className="w-full p-2 text-center">
-        <h1 className="font-medium text-2xl text-gray-600">Blogs</h1>
+        <h1 className="font-medium text-2xl text-gray-700">Blogs</h1>
       </div>
       <div className="text-gray-500 font-light italic w-full text-center">
         Thoughts, learnings, and insights from my development journey.
@@ -31,7 +31,7 @@ export default function Blogs() {
 
         {blogs.map((e, index) => (
           <div
-            className="relative border-1 p-4 border-gray-700 hover:border-gray-500 rounded-md w-65 h-85 m-4 cursor-pointer group "
+            className="relative border-1 p-4 border-gray-300 hover:border-gray-400 duration-300 ease-in-out rounded-md w-65 h-85 m-4 cursor-pointer group "
             onClick={() => {
               setBlog(index);
               console.log(index);

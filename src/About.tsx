@@ -4,18 +4,22 @@ import SkillsGrid from "./SkillsGrid";
 
 export default function About() {
   return (
-    <div className="sm:p-4 p-2 h-150 relative text-[5px] sm:text-sm flex flex-col border rounded-lg  border-dashed border-gray-600 shadow-2xl shadow-blue-900">
+    <div className="sm:p-4 p-2 h-150 relative text-[5px] sm:text-sm flex flex-col   border-gray-300 shadow-lg rounded-2xl shadow-gray-300 ">
       {/* <h1 className="font-medium text-4xl text-gray-600">About</h1> */}
       <div className="w-full h-full">
-        <div className="flex border-1 scale-90 border-gray-700 p-2 rounded-2xl w-30 justify-between items-center absolute sm:left-6 left-3 sm:top-20 top-8">
+        <div className="flex border-1 scale-90 border-gray-300 p-2 rounded-2xl w-30 justify-between items-center absolute sm:left-6 left-3 sm:top-20 top-8">
           <ContactNav />
         </div>
 
-        <div className="sm:w-30 absolute p-1 right-30   top-20">
-          <p className="sm:text-md text-[10px]">Suraj Gupta</p>
-          <div className="flex justify-around items-center   sm:w-15 w-5 sm:scale-80 scale-120">
-            <Location />
-            <span className="text-blue-400">India</span>
+        <div className="sm:w-30 absolute p-1 right-32   top-20">
+          <div className="flex-col items-center ">
+            <div className="font-semibold text-center sm:text-md text-[14px] ">{"Suraj Gupta"}</div>
+            <div className="flex items-center text-xs justify-center">
+              <div className="text-xs text-red-400">
+                <Location />
+              </div>
+              <p className="text-xs text-blue-400">India</p>
+            </div>
           </div>
         </div>
 
@@ -40,7 +44,7 @@ export default function About() {
           freelance work.
         </p>
       </div> */}
-      <div className="text-gray-500 font-light italic w-full text-center sm:text-sm text-[12px]">
+      <div className="text-gray-800 font-light italic w-full text-center sm:text-sm text-[12px]">
         A full-stack developer who enjoys building clean, scalable products.
       </div>
       <Hero />
@@ -57,7 +61,7 @@ export function Hero() {
 
       <div className="max-w-4xl text-justify">
         {/* Subheading */}
-        <p className="sm:text-sm text-[11px] text-gray-600 dark:text-gray-400 leading-loose">
+        <p className="sm:text-sm text-[11px] text-gray-700  leading-loose">
           Full-stack developer specializing in{" "}
           <span className="font-medium text-gray-900 dark:text-white">
             Next.js, Node.js, Prisma, and modern databases
