@@ -42,17 +42,17 @@ export default function Contact() {
       <div className="text-gray-600 font-light italic w-full text-center">
         Let’s build something impactful together.
       </div>
-      <div className="flex border-1 border-gray-300 p-2 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 sm:top-20 top-25">
+      <div className="flex border-1 border-gray-300 p-1 rounded-2xl w-30 justify-between items-center absolute right-10 sm:right-2 sm:top-20 top-25">
        <ContactNav />
       </div>
-      {status == 200 && (
-        <div className=" bg-gray-700 absolute -top-32 transition-all ease-in-out duration-500 right-2 p-2 text-xs">
+      {status == 200 && ( 
+        <div className=" bg-gray-800 text-white absolute -top-10 transition-all ease-in-out duration-500 right-2 p-2 text-xs">
           mail sent successfully
         </div>
       )}
       <form
         action={handleEmail}
-        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-300  sm:w-120 sm:mt-25 mt-15 sm:scale-100 scale-78  "
+        className="border-1 rounded-lg p-4 flex flex-col items-center border-gray-300  sm:w-120 sm:mt-25 mt-15 sm:scale-100 scale-90  "
       >
         <div className="mb-2 text-gray-600 font-semibold">Mail me</div>
         <input
