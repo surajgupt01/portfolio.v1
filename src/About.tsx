@@ -23,7 +23,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className=" border-gray-700 sm:w-25 sm:h-25 w-20 h-2 overflow-hidden  rounded-full absolute right-10 top-10  ">
+        <div className=" border-gray-700 sm:w-25 sm:h-25 w-20 h-20 overflow-hidden  rounded-full absolute right-10 top-10  ">
           <img src="/assets/DP.jpeg" className=" -rotate-30  "></img>
         </div>
       </div>
