@@ -59,7 +59,7 @@ Collaborated with team members to deliver production-ready features aligned with
               className="text-xs hover:text-neutral-500 cursor-pointer duration-300 ease-in-out"
               onClick={() => setMore((e) => !e)}
             >
-              {more ? `see more` : "see less"}
+              {more ? `see less` : "see more"}
             </button>
           </div>
         </div>
