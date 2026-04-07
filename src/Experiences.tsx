@@ -45,7 +45,7 @@ export default function Experience() {
               <br></br>
               {`refining user experience, and validating APIs for reliability and performance.`}
             </span> */}
-            <span>
+            <span className="text-xs font-normal text-gray-500 text-justify">
               {`Contributed as a Full-Stack Developer Intern on a Web3 platform, building and enhancing user-facing    features using Next.js and Tailwind CSS.
 Improved UI components and overall user experience by refining layouts, responsiveness, and component structure.
 Built the end-to-end frontend of a Polymarket-style mobile application using React Native, implementing core screens, navigation flows, and interactive UI elements.
