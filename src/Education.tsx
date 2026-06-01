@@ -1,35 +1,60 @@
+import { motion } from "motion/react";
+
 export default function Education() {
   return (
-    <div className="w-full sm:p-4 p-2">
-      <div className="w-full p-2 text-left">
-        <h1 className="font-medium text-2xl text-gray-700">Education</h1>
+    <motion.section
+      initial={{ y: 120 }}
+      viewport={{ once: true }}
+      whileInView={{ y: 0 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      className="w-full lg:px-6 lg:py-16 px-3 py-8 text-white"
+    >
+      {/* Heading */}
+      <div className="mb-10">
+        <p className="text-md uppercase tracking-[0.2em] text-zinc-500">
+          Education
+        </p>
       </div>
-      <div className="w-full flex justify-between items-center  font-semibold mt-4 p-4">
-        <div className=" flex  items-start">
-          <div className="flex justify-center items-center gap-2">
-            <div className="w-12 h-12  rounded-md hover:rotate-6 duration-300 ease-in-out cursor-pointer">
+
+      {/* Timeline Wrapper */}
+      <div className="relative ">
+        {/* Timeline Dot */}
+
+        {/* Content */}
+        <div className=" lg:gap-6 gap-2 flex flex-row items-start justify-between">
+          {/* Left */}
+          <div className="flex items-start lg:gap-4 gap-2">
+            {/* Logo */}
+            <div className="h-14 w-14 shrink-0 overflow-hidden rounded-xl  p-1 transition duration-300 hover:rotate-6">
               <img
                 src="./assets/Manipal_University_Jaipur_logo.png"
-                className="w-full h-full"
-              ></img>
-            </div>{" "}
-            
+                alt="Manipal University Jaipur"
+                className="h-full w-full object-contain"
+              />
+            </div>
+
+            {/* Text */}
+            <div>
+              <h2 className="lg:text-lg text-md font-semibold tracking-tight text-zinc-800">
+                Manipal University Jaipur
+              </h2>
+
+              <p className="mt-2 text-sm text-zinc-800">
+                B.Tech in Computer and Communication
+              </p>
+
+              <p className="mt-1 text-xs text-zinc-500">CGPA: 8.12</p>
+            </div>
           </div>
 
-          <div className="text-sm text-gray-500 mt-1 ml-4 font-normal flex flex-col">
-            <span className="sm:text-lg text-md font-semibold text-gray-700">Manipal University Jaipur</span>
-            {" "}
-            B.Tech in Computer and Communication{" "}
-            <span className="text-xs font-light">{" (8.12 CGPA) "}</span>
+          {/* Date Badge */}
+          <div className="shrink-0">
+            <div className="rounded-full  px-3 py-1 text-xs text-zinc-800 bg-zinc-200 shadow-sm">
+              2021 – 2025
+            </div>
           </div>
         </div>
-        <div className="flex justify-center font-semibold items-center gap-2 text-xs text-gray-400">
-          <div>2021</div>
-          {"-"}
-          <div>2025</div>
-        </div>
       </div>
-      <div className="border border-dashed border-gray-300 mt-20 mb-2 w-full"></div>
-    </div>
+    </motion.section>
   );
 }
