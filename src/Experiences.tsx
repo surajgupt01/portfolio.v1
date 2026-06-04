@@ -16,7 +16,7 @@ export default function Experience() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
 
   return (
-    <motion.section ref={ref} style={{y , opacity}} className="w-full px-6 py-16 text-white">
+    <motion.section ref={ref} style={{y , opacity}} className="w-full px-6 py-16 text-white" id="work">
       {/* Heading */}
       <div className="mb-10">
         <p className="text-md uppercase tracking-[0.2em] text-zinc-500">

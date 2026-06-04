@@ -43,6 +43,7 @@ export default function About() {
       }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="sm:p-4 p-2 h-auto relative text-[5px] sm:text-sm flex flex-col   border-gray-300 gap-4  "
+      id="home"
     >
       <div className="flex flex-row items-center justify-start p-1  gap-2 text-xs">
         <span className="bg-green-500 rounded-full p-1 w-1 h-1 animate-pulse"></span>

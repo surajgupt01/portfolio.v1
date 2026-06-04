@@ -5,23 +5,21 @@ import Github from "./Github";
 
 export default function Footer() {
   return (
-    <footer className="md:w-[70%] w-[85%] px-4 py-10">
+    <footer className="md:w-[70%] w-[85%] px-4 py-10" id="contact">
       <div className="rounded-xl text-white">
         {/* CTA Section */}
         <div className="border-b border-zinc-200 pb-14">
-          <div className="flex flex-col items-center text-justify">
+          <div className="flex flex-col items-center ">
             {/* Heading */}
-            <h2 className="text-2xl font-semibold tracking-tight text-zinc-800">
-              Ready to build something impactful?
+            <h2 className="lg:text-2xl text-xl font-semibold tracking-tight text-zinc-800">
+              Building something exciting?
             </h2>
 
             {/* Subtext */}
-            <p className="mt-4 w-full text-sm leading-relaxed text-zinc-500">
+            <p className="mt-4 w-full text-sm leading-relaxed text-zinc-500  text-center lg:w-[70%]">
               I&apos;m available for remote full-time roles, freelance projects,
-              and startup collaborations. Whether you&apos;re building an
-              AI-powered SaaS product, modern full-stack application, or
-              scalable backend system, let&apos;s discuss how I can help bring
-              your vision to life.
+              and startup collaborations.
+              I'm always interested in ambitious products, startup ideas, and meaningful collaborations.
             </p>
 
             {/* Availability */}
@@ -95,6 +93,8 @@ export default function Footer() {
                   hover:border-zinc-400
                   hover:bg-neutral-200
                 "
+
+                onClick={()=>{window.open('https://cal.com/suraj-gupta/20min')}}
               >
                 <CalendarDays size={16} />
                 Book a Call

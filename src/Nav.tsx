@@ -13,12 +13,12 @@ const navItems = [
   },
   {
     name: "Work",
-    href: "#projects",
+    href: "#work",
     icon: Briefcase,
   },
   {
-    name: "Skills",
-    href: "#skills",
+    name: "Blogs",
+    href: "#blog",
     icon: NotebookTabs,
   },
   {

@@ -24,8 +24,8 @@ export const ProjectsDescription = [
     status: "In Production",
 
     link: "./assets/pulse-ai.jpg",
-    github: "https://github.com/yourusername/pulse-ai",
-    liveLink: "https://your-live-link.com",
+    github: "https://github.com/surajgupt01/NutriScan-AI",
+    liveLink: "https://nutri-scan-ai-virid.vercel.app/",
   },
 
   {
