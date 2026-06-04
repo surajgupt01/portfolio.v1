@@ -15,12 +15,12 @@ export default function BlogSection() {
         {/* Left Content */}
         <div className="max-w-3xl">
           <h3 className="text-xl font-semibold tracking-tight text-zinc-900 transition duration-300 group-hover:text-zinc-500">
-            Why Most AI SaaS Products Fail at UX ?
+            How I Built Pulse AI?
           </h3>
 
           <p className="mt-2 text-sm leading-relaxed text-zinc-500">
-            Building with AI is easy now. Building intuitive, trustworthy, and
-            production-ready AI experiences is still the hard part.
+            Building an AI-powered ingredient analysis platform using OCR, LLMs,
+            and modern full-stack technologies.
           </p>
 
           {/* Date */}
