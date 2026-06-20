@@ -51,7 +51,7 @@ export const ProjectsDescription = [
 
     link: "./assets/Luen.jpg",
     github: "https://github.com/surajgupt01/Invo-Gen",
-    liveLink: "https://invo-gen-nine.vercel.app/",
+    liveLink: "https://luen.in/",
   },
 
   {
