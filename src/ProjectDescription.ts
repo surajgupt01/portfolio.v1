@@ -1,22 +1,21 @@
 export const ProjectsDescription = [
   {
-    title: `Pulse AI`,
-    description: `Developing an AI-powered label scanning platform to analyze product ingredients and provide simplified insights for users.`,
-    
+    title: "Pulse AI",
+    description: "An advanced, AI-powered product label and ingredient analysis platform. Extracts text via OCR, runs intelligent safety evaluations through the Gemini API, and offers an interactive contextual chat interface.",
+
     features: [
-      "Image upload & OCR-based text extraction",
-      "Ingredient analysis with AI insights",
-      "Interactive AI chat interface",
-      "Production-ready deployment",
+      "High-accuracy OCR-based text & ingredient extraction from images",
+      "Deep AI-driven health insights, allergen detection, and risk scoring",
+      "Interactive conversational AI companion to query specific ingredients",
+      "Optimized production architecture with serverless deployment",
     ],
 
     techStack: [
-      "NextJs",
+      "Next.js",
       "TypeScript",
-      "TailwindCSS",
+      "Tailwind CSS",
       "FastAPI",
       "Python",
-      "OCR",
       "Gemini API",
       "PostgreSQL",
     ],
@@ -29,22 +28,24 @@ export const ProjectsDescription = [
   },
 
   {
-    title: `Invoice Generator`,
-    description: `Developing a website to create custom invoices for non-tech users.`,
+    title: "Invoice Generator (Luen)",
+    description: "A sleek, production-grade billing and custom invoice generation platform built specifically for modern freelancers, creators, and small businesses to handle client transactions seamlessly.",
 
     features: [
-      "Custom invoice generation",
-      "Authentication system",
-      "Clean and simple UI",
+      "Dynamic, professional PDF invoice creation and real-time preview",
+      "Secure user authentication and workspace management via Auth.js",
+      "Streamlined client record tracking and automated invoice history",
+      "Clean, distraction-free neutral UI designed for speed and clarity",
     ],
 
     techStack: [
-      "NextJs",
-      "JavaScript",
-      "NodeJS",
-      "ExpressJS",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
       "PostgreSQL",
-      "AuthJs",
+      "Auth.js",
+      "Tailwind CSS",
     ],
 
     status: "In Production",
@@ -56,80 +57,30 @@ export const ProjectsDescription = [
 
   {
     title: "EDA-X - Exploratory Data Analysis",
-    description: `Built an interactive no-code EDA platform for visualizing and analyzing datasets.`,
+    description: "An interactive, zero-setup exploratory data analysis and visualization tool that empowers developers and analysts to effortlessly inspect CSV datasets and uncover statistical patterns.",
 
     features: [
-      "Dynamic charts and visual insights",
-      "Statistical data analysis",
-      "CSV dataset processing",
-      "Interactive plotting system",
+      "Instant CSV data parsing, processing, and structural overview",
+      "Dynamic data visualization with interactive charts and plots",
+      "Automated statistical summaries powered by Python backend libraries",
+      "Responsive, component-driven dashboard for fluid data inspection",
     ],
 
     techStack: [
-      "ReactJS",
+      "React",
       "TypeScript",
-      "TailwindCSS",
+      "Tailwind CSS",
       "Chart.js",
       "FastAPI",
       "Python",
-      "NumPy",
       "Pandas",
-      "Matplotlib",
+      "NumPy",
     ],
+
+    status: "In Production",
 
     link: "/assets/Screenshot 2025-05-11 001552.png",
     github: "https://github.com/surajgupt01/EDA-X",
     liveLink: "https://eda-x.vercel.app/",
-  },
-
-  {
-    title: `Social Share`,
-    description: `Built a full-stack platform to save and share social media content as embeds.`,
-
-    features: [
-      "Save YouTube & Twitter embeds",
-      "Shareable content collections",
-      "Authentication & protected routes",
-    ],
-
-    techStack: [
-      "ReactJS",
-      "TypeScript",
-      "TailwindCSS",
-      "NodeJS",
-      "ExpressJS",
-      "MongoDB",
-      "Mongoose",
-      "JWT Auth",
-    ],
-
-    link: "/assets/Screenshot 2025-06-02 194549.png",
-    github: "https://github.com/surajgupt01/SocialShare",
-    liveLink: "https://social-share-one.vercel.app/",
-  },
-
-  {
-    title: `StreamKrate`,
-    description: `Developed a full-stack file-sharing platform with AWS S3 integration.`,
-
-    features: [
-      "File uploads up to 500MB",
-      "AWS S3 cloud storage integration",
-      "Optimized file sharing performance",
-    ],
-
-    techStack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "NodeJS",
-      "ExpressJS",
-      "MongoDB",
-      "AWS S3",
-    ],
-
-    link: "/assets/Screenshot 2025-03-04 214417.png",
-    github: "https://github.com/surajgupt01/streamkrate",
-    liveLink: "https://streamkrate.onrender.com/",
   },
 ];

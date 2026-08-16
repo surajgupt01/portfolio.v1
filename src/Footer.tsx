@@ -1,147 +1,158 @@
 import { Mail, FileDown, CalendarDays, Rss } from "lucide-react";
-
 import LinkedIn from "./LinkedIn";
 import Github from "./Github";
 
 export default function Footer() {
   return (
-    <footer className="md:w-[70%] w-[85%] px-4 py-10" id="contact">
-      <div className="rounded-xl text-white">
-        {/* CTA Section */}
-        <div className="border-b border-zinc-200 pb-14">
-          <div className="flex flex-col items-center ">
-            {/* Heading */}
-            <h2 className="lg:text-2xl text-xl font-semibold tracking-tight text-zinc-800">
-              Building something exciting?
-            </h2>
+    <footer className="w-full py-16 sm:py-20 flex justify-center" id="contact">
+      <div className="w-[90%] md:w-[75%] max-w-5xl">
+        <div className="flex flex-col text-neutral-900">
+          
+          {/* CTA Section */}
+          <div className="border-b border-neutral-200 pb-16">
+            <div className="flex flex-col items-center text-center">
+              
+              {/* Availability Badge */}
+              <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-neutral-200 bg-white px-4 py-1.5 text-xs font-medium text-neutral-700 shadow-2xs">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Available for remote opportunities
+              </div>
 
-            {/* Subtext */}
-            <p className="mt-4 w-full text-sm leading-relaxed text-zinc-500  text-center lg:w-[70%]">
-              I&apos;m available for remote full-time roles, freelance projects,
-              and startup collaborations.
-              I'm always interested in ambitious products, startup ideas, and meaningful collaborations.
-            </p>
+              {/* Heading */}
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
+                Building something exciting?
+              </h2>
 
-            {/* Availability */}
-            <div className="mt-5 flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-1 text-sm text-green-700">
-              <div className="h-2 w-2 rounded-full bg-green-500" />
-              Available for remote opportunities
+              {/* Subtext */}
+              <p className="mt-3 text-sm sm:text-base leading-relaxed text-neutral-600 max-w-xl">
+                I&apos;m available for remote full-time roles, freelance projects,
+                and startup collaborations. Always interested in ambitious
+                products and meaningful challenges.
+              </p>
+
+              {/* Buttons */}
+              <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-3">
+                {/* Email (Primary Action) */}
+                <button
+                  onClick={() => window.open("mailto:suragupt880@gmail.com")}
+                  className="
+                    cursor-pointer
+                    flex items-center gap-2
+                    rounded-md
+                    bg-neutral-900
+                    px-4.5 py-2.5
+                    text-sm font-medium text-white
+                    shadow-xs
+                    transition-all duration-200
+                    hover:bg-neutral-800
+                    active:scale-95
+                  "
+                >
+                  <Mail size={16} />
+                  Send an Email
+                </button>
+
+                {/* Consultation */}
+                <button
+                  className="
+                    cursor-pointer
+                    flex items-center gap-2
+                    rounded-md
+                    border border-neutral-300
+                    bg-white
+                    px-4.5 py-2.5
+                    text-sm font-medium text-neutral-700
+                    shadow-xs
+                    transition-all duration-200
+                    hover:bg-neutral-50
+                    hover:border-neutral-400
+                    active:scale-95
+                  "
+                  onClick={() => {
+                    window.open("https://cal.com/suraj-gupta/20min");
+                  }}
+                >
+                  <CalendarDays size={16} />
+                  Book a Call
+                </button>
+
+                {/* Resume */}
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/15pcL4Mauqh2BWsFNY42SnlnmfKSfmsew/view?usp=sharing",
+                      "_blank"
+                    )
+                  }
+                  className="
+                    cursor-pointer
+                    flex items-center gap-2
+                    rounded-md
+                    border border-neutral-300
+                    bg-white
+                    px-4.5 py-2.5
+                    text-sm font-medium text-neutral-700
+                    shadow-xs
+                    transition-all duration-200
+                    hover:bg-neutral-50
+                    hover:border-neutral-400
+                    active:scale-95
+                  "
+                >
+                  <FileDown size={16} />
+                  Download Resume
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Footer */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+            
+            {/* Left Info */}
+            <div className="flex flex-col items-center sm:items-start">
+              <span className="text-sm font-medium text-neutral-900">© 2026 Suraj Gupta</span>
+              <span className="text-xs text-neutral-500 mt-0.5">
+                Full-stack + GenAI Engineer
+              </span>
             </div>
 
-            {/* Buttons */}
-            <div className="mt-10 flex flex-row flex-wrap items-center justify-center gap-4 ">
-              {/* Resume */}
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/15pcL4Mauqh2BWsFNY42SnlnmfKSfmsew/view?usp=sharing",
-                    "_blank",
-                  )
-                }
-                className="
-                cursor-pointer
-                  flex items-center gap-2
-                  rounded-lg
-                  border border-zinc-300
-                  bg-white
-                  px-4 py-2
-                  text-sm font-medium text-zinc-700
-                  transition-all duration-300
-                  hover:scale-[1.03]
-                  hover:border-zinc-400
-                  hover:bg-zinc-100
-                "
+            {/* Right Links */}
+            <div className="flex items-center gap-6 text-sm text-neutral-600">
+              <a
+                href="https://github.com/surajgupt01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors duration-200 hover:text-neutral-900"
               >
-                <FileDown size={16} />
-                Download Resume
-              </button>
+                <Github />
+                GitHub
+              </a>
 
-              {/* Email */}
-              <button
-                onClick={() => window.open("mailto:suragupt880@gmail.com")}
-                className="
-                cursor-pointer
-                  flex items-center gap-2
-                  rounded-lg
-                  border border-indigo-500/20
-                  bg-black
-                  px-4 py-2
-                  text-sm font-medium text-white
-                  transition-all duration-300
-                  hover:scale-[1.03]
-                  hover:border-neutral-400/40
-                  hover:bg-neutral-900
-                "
+              <a
+                href="https://www.linkedin.com/in/suraj-gupta-1894051ba/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors duration-200 hover:text-neutral-900"
               >
-                <Mail size={16} />
-                Send an Email
-              </button>
+                <LinkedIn />
+                LinkedIn
+              </a>
 
-              {/* Consultation */}
-              <button
-                className="
-                  flex items-center gap-2
-                cursor-pointer
-
-                  rounded-lg
-                  border border-zinc-300
-                  bg-neutral-100
-                  px-4 py-2
-                  text-sm font-medium text-zinc-700
-                  transition-all duration-300
-                  hover:scale-[1.03]
-                  hover:border-zinc-400
-                  hover:bg-neutral-200
-                "
-
-                onClick={()=>{window.open('https://cal.com/suraj-gupta/20min')}}
+              <a
+                href="#"
+                className="flex items-center gap-2 transition-colors duration-200 hover:text-neutral-900"
               >
-                <CalendarDays size={16} />
-                Book a Call
-              </button>
+                <Rss size={16} />
+                Blog
+              </a>
             </div>
-          </div>
-        </div>
 
-        {/* Bottom Footer */}
-        <div className="mt-8 flex flex-col md:gap-6 gap-3 md:flex-row md:items-center md:justify-between">
-          {/* Left */}
-          <div className="flex flex-col">
-            <span className="text-md text-zinc-700">© 2026 Suraj Gupta</span>
-
-            <span className="mt-1 text-sm text-zinc-500">
-              Full-stack + GenAI Engineer
-            </span>
           </div>
 
-          {/* Right Links */}
-          <div className="flex items-center gap-8 text-zinc-500">
-            <a
-              href="https://github.com/surajgupt01"
-              target="_blank"
-              className="flex items-center gap-2 transition duration-300 hover:text-zinc-800"
-            >
-              <Github />
-              GitHub
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/suraj-gupta-1894051ba/"
-              target="_blank"
-              className="flex items-center gap-2 transition duration-300 hover:text-zinc-800"
-            >
-              <LinkedIn />
-              LinkedIn
-            </a>
-
-            <a
-              href="#"
-              className="flex items-center gap-2 transition duration-300 hover:text-zinc-800"
-            >
-              <Rss size={18} />
-              Blog
-            </a>
-          </div>
         </div>
       </div>
     </footer>

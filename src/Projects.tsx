@@ -1,85 +1,105 @@
 import Github from "./Github";
 import Link from "./Link";
-
 import { ProjectsDescription } from "./ProjectDescription";
 
 export default function Projects() {
-  function jumpTab(Links: string) {
-    window.open(Links);
+  function jumpTab(links: string) {
+    window.open(links, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <div className="w-full h-full overflow-auto mt-10 ">
-      {/* <div className="border border-dashed border-gray-300 mt-2 mb-2 w-full"></div> */}
-      {/* <div className="w-full p-2 text-center">
-        <h1 className="font-medium text-2xl text-gray-700"></h1>
-      </div> */}
+    <div
+      className="w-full bg-white py-16 sm:py-20 flex flex-col items-center"
+      id="projects"
+    >
+      {/* Outer wrapper takes full 100% width of the page */}
+      <div className="w-full max-w-6xl px-4 flex flex-col items-center">
+        
+        {/* Section Header - Takes full parent width and left-aligned */}
+        <div className="w-full flex flex-col items-start text-left mb-10 sm:mb-12">
+          <span className="text-xs uppercase tracking-[0.25em] text-neutral-400 font-semibold mb-3">
+            Proof of Work
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
+            Featured Projects
+          </h2>
+          <p className="mt-2 text-sm sm:text-base text-neutral-500 max-w-lg">
+            Real-world applications I’ve designed, built, and shipped to
+            production.
+          </p>
+        </div>
 
-            <div className="mb-10 px-6">
-        <p className="text-md uppercase tracking-[0.2em] text-zinc-500">
-          Proof of work
-        </p>
-      </div>
-
-      <div className="text-gray-700 font-light text-sm tracking-wide w-full text-center my-8">
-        Real-world projects. I’ve designed, built, and shipped.
-      </div>
-
-      <div className="w-full flex justify-center items-center">
-        <div className="w-[80%] h-full mt-15 sm:mt-0 grid grid-cols-1  sm:grid-cols-2   sm:p-4 text-left justify-between  text-xs relative overflow-auto gap-4 p-3 ">
-          {/* <p className='text-lg font-semibold mt-8'> Projects:</p> */}
-
+        {/* Projects Grid - Restricted to 90% to 75% width, centered cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[90%] md:w-[85%] justify-items-center">
           {ProjectsDescription.map((e) => (
             <div
-              className=" border-1 border-gray-200 p-2  rounded-xs cursor-pointer group  hover:bg-white group hover:border-gray-400 hover:border-dashed hover:shadow-lg duration-300 ease-in-out h-90 sm:h-90 w-full "
               key={e.title}
+              className="group/card flex flex-col justify-between rounded-xl border border-neutral-200 bg-white p-5 shadow-xs transition-all duration-300 hover:border-neutral-300 hover:shadow-sm w-full"
             >
-              
-                <div className="flex scale-[65%] w-34 justify-center items-center  -ml-6 -mt-2 bg-neutral-100 border-gray-300  rounded-xs ">
-                  <div
-                    className="hover:scale-105 duration-300 ease-in-out "
-                    onClick={() => jumpTab(e.github)}
-                  >
-                    <Github />
-                  </div>
+              <div>
+                {/* Project Image / Thumbnail Wrapper */}
+                <div className="relative mb-4 overflow-hidden rounded-lg border border-neutral-100 bg-neutral-50 aspect-video">
+                  <img
+                    src={e.link}
+                    alt={`Screenshot of ${e.title}`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover/card:scale-105"
+                  />
 
-                  <div className="flex text-xs justify-center gap-1 items-center    rounded-r-xs p-2">
-                    <Link />{" "}
-                    <span
-                      className="hover:text-green-700 duration-300 text-lg ease-in-out"
-                      onClick={() => jumpTab(e.liveLink)}
+                  {/* Action Links - Always visible on mobile, overlay on desktop hover */}
+                  <div className="absolute inset-0 bg-neutral-900/10 sm:bg-neutral-900/40 sm:opacity-0 sm:group-hover/card:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 p-4">
+                    <button
+                      onClick={() => jumpTab(e.github)}
+                      className="rounded-full bg-white sm:bg-white p-3 sm:p-2.5 text-neutral-900 shadow-lg sm:shadow-sm transition-transform hover:scale-110 cursor-pointer active:scale-95"
+                      aria-label="Open GitHub Repository"
                     >
-                      {" "}
-                      Live view
-                    </span>
+                      <Github />
+                    </button>
+                    <button
+                      onClick={() => jumpTab(e.liveLink)}
+                      className="rounded-full bg-white sm:bg-white p-3 sm:p-2.5 text-neutral-900 shadow-lg sm:shadow-sm transition-transform hover:scale-110 cursor-pointer active:scale-95"
+                      aria-label="Open Live Demo"
+                    >
+                      <Link />
+                    </button>
                   </div>
                 </div>
 
-
-              {e.title == "Form Builder" ? (
-                <div className="flex justify-center items-center border-gray-300 rounded-sm w-full h-20 animate-pulse text-xl">
-                  {" "}
-                  Coming soon
+                {/* Title & Status */}
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-base font-semibold text-neutral-900 group-hover/card:text-neutral-700 transition-colors">
+                    {e.title}
+                  </h3>
+                  {e.status && (
+                    <span className="shrink-0 rounded-full bg-green-50 px-2.5 py-0.5 text-[10px] font-medium text-green-700 border border-green-100">
+                      {e.status}
+                    </span>
+                  )}
                 </div>
-              ) : (
-                <img src={e.link} className="mb-2 "></img>
-              )}
 
-              <p className="font-semibold group-hover:text-blue-500 duration-200 ease-in-out">
-                {e.title}
-              </p>
-              <div className="text-gray-600 mt-2 text-left group-hover:text-gray-800">
-                {e.description}
+                {/* Description */}
+                <p className="mt-2 text-xs sm:text-sm leading-relaxed text-neutral-600 line-clamp-3">
+                  {e.description}
+                </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2 mt-4">
-                {e.techStack.map((e)=>(<div className="rounded-lg py-1 px-2 text-[9px] bg-gray-200 text-black">{e}</div>))}
+              {/* Tech Stack Badges */}
+              <div className="mt-5 pt-4 border-t border-neutral-100">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {e.techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-md bg-neutral-100 px-2 py-1 text-[10px] font-medium text-neutral-600"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
-      {/* <div className="border border-dashed border-gray-300 mt-2 mb-2 w-full"></div> */}
     </div>
   );
 }
