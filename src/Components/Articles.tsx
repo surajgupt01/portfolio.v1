@@ -22,70 +22,70 @@ export default function ArticlesListPage() {
   ];
 
   return (
-    <div className="w-full bg-white min-h-screen py-12 sm:py-16 flex justify-center text-neutral-900">
+    <div className="w-full bg-white min-h-screen py-8 sm:py-12 flex justify-center text-neutral-900">
       <div className="w-[90%] md:w-[70%] max-w-3xl">
         
         {/* Back Navigation */}
-        <div className="mb-6">
+        <div className="mb-4">
           <Link
             to="/"
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+            className="inline-flex items-center gap-1 text-[11px] font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
           >
-            <ArrowLeft size={14} />
+            <ArrowLeft size={12} />
             <span>Back to portfolio</span>
           </Link>
         </div>
 
         {/* Page Header */}
-        <header className="mb-8 pb-6 border-b border-neutral-200">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-neutral-400 font-semibold mb-2 block">
+        <header className="mb-6 pb-4 border-b border-neutral-200">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold mb-1.5 block">
             Thoughts & Writings
           </span>
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-neutral-900">
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-tight text-neutral-900">
             All Articles
           </h1>
-          <p className="mt-2 text-xs sm:text-sm text-neutral-500 leading-relaxed">
+          <p className="mt-1 text-xs text-neutral-500 leading-relaxed">
             Documenting my engineering journey, architectural decisions, and learnings from building real-world software products.
           </p>
         </header>
 
         {/* Articles List */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {articles.map((article) => (
             <Link
               key={article.slug}
               to={`/blogs/${article.slug}`}
-              className="group relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-xl border border-neutral-200 bg-white p-5 sm:p-6 shadow-2xs transition-all duration-300 hover:border-neutral-300 hover:shadow-xs block"
+              className="group relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 rounded-lg border border-neutral-200 bg-white p-4 sm:p-5 shadow-2xs transition-all duration-300 hover:border-neutral-300 hover:shadow-xs block"
             >
               <div className="max-w-xl">
-                <div className="flex flex-wrap items-center gap-2.5 text-[11px] text-neutral-400 mb-2">
-                  <span className="rounded-md bg-neutral-100 px-2 py-0.5 font-medium text-neutral-600">
+                <div className="flex flex-wrap items-center gap-2 text-[10px] text-neutral-400 mb-1.5">
+                  <span className="rounded-md bg-neutral-100 px-1.5 py-0.5 font-medium text-neutral-600">
                     {article.category}
                   </span>
                   <span>•</span>
                   <div className="flex items-center gap-1">
-                    <CalendarDays size={12} />
+                    <CalendarDays size={11} />
                     <span>{article.date}</span>
                   </div>
                   <span>•</span>
                   <div className="flex items-center gap-1">
-                    <Clock size={12} />
+                    <Clock size={11} />
                     <span>{article.readTime}</span>
                   </div>
                 </div>
 
-                <h2 className="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 transition-colors duration-200 group-hover:text-neutral-600">
+                <h2 className="text-sm sm:text-base font-semibold tracking-tight text-neutral-900 transition-colors duration-200 group-hover:text-neutral-600">
                   {article.title}
                 </h2>
 
-                <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-neutral-500 line-clamp-2">
+                <p className="mt-1 text-[11px] sm:text-xs leading-relaxed text-neutral-500 line-clamp-2">
                   {article.description}
                 </p>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs font-medium text-neutral-900 transition-colors duration-200 group-hover:text-neutral-600 self-start sm:self-center whitespace-nowrap">
+              <div className="flex items-center gap-1 text-[11px] font-medium text-neutral-900 transition-colors duration-200 group-hover:text-neutral-600 self-start sm:self-center whitespace-nowrap">
                 <span>Read article</span>
-                <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1 shrink-0" />
+                <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-1 shrink-0" />
               </div>
             </Link>
           ))}
