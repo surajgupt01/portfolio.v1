@@ -7,7 +7,7 @@ export default function Education() {
       viewport={{ once: true }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="w-full bg-white py-12 sm:py-16 flex justify-center max-w-3xl mx-auto"
+      className="w-full  py-12 sm:py-16 flex justify-center max-w-3xl mx-auto"
       id="education"
     >
       <div className="w-full">

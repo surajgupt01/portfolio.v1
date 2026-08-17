@@ -9,7 +9,7 @@ export default function Projects() {
 
   return (
     <div
-      className="w-full bg-white py-12 sm:py-16 flex flex-col items-center"
+      className="w-full  py-12 sm:py-16 flex flex-col items-center"
       id="projects"
     >
       {/* Outer wrapper takes full 100% width of the page */}
