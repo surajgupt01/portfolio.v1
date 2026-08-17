@@ -41,7 +41,7 @@ export default function Experience() {
             {/* Timeline Dot */}
             <div className="absolute -left-[25px] sm:-left-[29px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-neutral-200 bg-neutral-900 animate-pulse shadow-2xs" />
 
-            <div className="rounded-xl border border-neutral-200 bg-white p-5 sm:p-6 shadow-2xs transition-all duration-300 hover:border-neutral-300 hover:shadow-xs">
+            <div className="rounded-xl border border-neutral-100  p-5 sm:p-6 shadow-2xs transition-all duration-300 hover:border-neutral-200 hover:shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
                 
                 {/* Company info */}
@@ -115,9 +115,9 @@ export default function Experience() {
           {/* ================= TRIVOLVE TECH ================= */}
           <div className="relative">
             {/* Timeline Dot */}
-            <div className="absolute -left-[25px] sm:-left-[29px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-neutral-200 bg-white shadow-2xs" />
+            <div className="absolute -left-[25px] sm:-left-[29px] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-neutral-100  shadow-2xs" />
 
-            <div className="rounded-xl border border-neutral-200 bg-white p-5 sm:p-6 shadow-2xs transition-all duration-300 hover:border-neutral-300 hover:shadow-xs">
+            <div className="rounded-xl border border-neutral-100  p-5 sm:p-6  transition-all duration-300 hover:border-neutral-200 hover:shadow-2xs shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
                 
                 {/* Company info */}

@@ -42,7 +42,7 @@ export default function BlogSection() {
           onClick={() => {
             navigate("/blogs/pulse-ai");
           }}
-          className="group relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-xl border border-neutral-200 bg-white p-5 sm:p-6 shadow-2xs transition-all duration-300 hover:border-neutral-300 hover:shadow-xs cursor-pointer"
+          className="group relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-xl border border-neutral-100 bg-transparent p-5 sm:p-6 transition-all duration-300 hover:border-neutral-200 hover:shadow-2xs shadow-xs cursor-pointer"
         >
           {/* Left Content */}
           <div className="max-w-xl">

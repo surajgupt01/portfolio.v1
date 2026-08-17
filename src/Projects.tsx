@@ -33,7 +33,7 @@ export default function Projects() {
           {ProjectsDescription.map((e) => (
             <div
               key={e.title}
-              className="group/card flex flex-col justify-between rounded-xl border border-neutral-200 bg-white p-4 sm:p-5 shadow-2xs transition-all duration-300 hover:border-neutral-300 hover:shadow-xs w-full"
+              className="group/card flex flex-col justify-between rounded-xl border border-neutral-100 bg-transparent p-4 sm:p-5 shadow-2xs transition-all duration-300 hover:border-neutral-200 hover:shadow-xs w-full"
             >
               <div>
                 {/* Project Image / Thumbnail Wrapper */}

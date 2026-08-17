@@ -7,9 +7,19 @@ import Github from "./Github";
 import LinkedIn from "./LinkedIn";
 import Location from "./Location";
 import Mail from "./Mail";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 
 export default function About() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Parallax translation effect for the cover image
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "45%"]);
+
   const QuickLinks = [
     { name: "Download resume", icon: <DocsIcon /> , link : 'https://drive.google.com/file/d/15pcL4Mauqh2BWsFNY42SnlnmfKSfmsew/view?usp=sharing' },
     { name: "Github", icon: <Github /> , link : 'https://github.com/surajgupt01' },
@@ -37,21 +47,24 @@ export default function About() {
 
   return (
     <motion.div
+      ref={containerRef}
       initial={{ opacity: 0, translateY: 30 }}
       animate={{
         opacity: 1,
         translateY: 0,
       }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="sm:p-4  h-auto relative text-xs sm:text-sm flex flex-col border-neutral-200 gap-5 "
+      className="sm:p-4 h-auto relative text-xs sm:text-sm flex flex-col border-neutral-200 gap-5"
       id="home"
     >
-     
-     
-      <div className="flex flex-row items-center justify-start gap-2 text-xs ">
-        <span className="bg-green-500 rounded-full w-1.5 h-1.5 animate-pulse"></span>
-        <p className="text-neutral-800 font-medium">{`Open to remote opportunities`}</p>
-        <div className="bg-neutral-100 border border-neutral-200 shadow-2xs rounded-lg text-purple-600 px-2.5 py-0.5 text-[11px] font-medium">{`Actively looking`}</div>
+      {/* Cover Image Container with subtle grayscale by default, returning to color and scaling up smoothly on hover */}
+      <div className="w-full h-36 sm:h-48 overflow-hidden rounded-xl border-x border-t border-neutral-200/80 bg-neutral-100 relative group cursor-pointer">
+        <motion.img
+          style={{ y: imageY }}
+          src="./assets/feature.png"
+          alt="Cover"
+          className="w-full h-[125%] object-cover absolute top-0 left-0 grayscale-[25%] transition-all duration-500 ease-out group-hover:scale-105 group-hover:grayscale-0"
+        />
       </div>
 
       <div className="flex flex-col gap-3">
