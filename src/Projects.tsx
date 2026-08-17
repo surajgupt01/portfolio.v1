@@ -13,7 +13,7 @@ export default function Projects() {
       id="projects"
     >
       {/* Outer wrapper takes full 100% width of the page */}
-      <div className="w-full max-w-5xl px-4 flex flex-col items-center">
+      <div className="w-full max-w-5xl  flex flex-col items-center">
         
         {/* Section Header - Takes full parent width and left-aligned */}
         <div className="w-full flex flex-col items-start text-left mb-8 sm:mb-10">

@@ -43,10 +43,12 @@ export default function About() {
         translateY: 0,
       }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="sm:p-4 p-4 h-auto relative text-xs sm:text-sm flex flex-col border-neutral-200 gap-5 "
+      className="sm:p-4  h-auto relative text-xs sm:text-sm flex flex-col border-neutral-200 gap-5 "
       id="home"
     >
-      <div className="flex flex-row items-center justify-start gap-2 text-xs">
+     
+     
+      <div className="flex flex-row items-center justify-start gap-2 text-xs ">
         <span className="bg-green-500 rounded-full w-1.5 h-1.5 animate-pulse"></span>
         <p className="text-neutral-800 font-medium">{`Open to remote opportunities`}</p>
         <div className="bg-neutral-100 border border-neutral-200 shadow-2xs rounded-lg text-purple-600 px-2.5 py-0.5 text-[11px] font-medium">{`Actively looking`}</div>

@@ -10,7 +10,7 @@ export default function BlogSection() {
 
   return (
     <section
-      className="w-full  py-12 sm:py-16 flex justify-center max-w-3xl mx-auto"
+      className="w-full  py-12 sm:py-16 flex  max-w-3xl  mx-auto"
       id="blog"
     >
       <div className="w-full">

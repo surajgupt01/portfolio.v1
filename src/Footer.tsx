@@ -4,14 +4,23 @@ import Github from "./Github";
 
 export default function Footer() {
   return (
-    <footer className="w-full py-12 sm:py-16 flex justify-center" id="contact">
-      <div className="w-[90%] md:w-[75%] max-w-4xl">
+    <footer className="w-full py-12 sm:py-16 flex justify-center mx-auto" id="contact">
+      <div className="w-[90%] md:w-[75%] max-w-3xl">
         <div className="flex flex-col text-neutral-900">
           
           {/* CTA Section */}
-          <div className="border-b border-neutral-200 pb-12">
-            <div className="flex flex-col items-center text-center">
-              
+          <div className="border border-neutral-200/80 rounded-2xl overflow-hidden pb-12 relative  bg-neutral-50/50">
+            {/* Background Cover Image */}
+            <div className="w-full h-32 sm:h-40 absolute inset-x-0 top-0 overflow-hidden z-0">
+              <img
+                src="/assets/hero.png"
+                alt="Cover"
+                className="w-full h-full object-cover object-center opacity-90"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 via-neutral-50/5 to-transparent" />
+            </div>
+
+            <div className="flex flex-col items-center text-center pt-16 sm:pt-20 px-4 sm:px-8 relative z-10">
               {/* Availability Badge */}
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-3 py-1 text-[11px] font-medium text-neutral-700 shadow-2xs">
                 <span className="relative flex h-2 w-2">
@@ -28,7 +37,9 @@ export default function Footer() {
 
               {/* Subtext */}
               <p className="mt-2 text-xs sm:text-sm leading-relaxed text-neutral-500 max-w-lg">
-                I&apos;m available for remote full-time roles, freelance projects, and startup collaborations. Always interested in ambitious products and meaningful challenges.
+                I&apos;m available for remote full-time roles, freelance
+                projects, and startup collaborations. Always interested in
+                ambitious products and meaningful challenges.
               </p>
 
               {/* Buttons */}
@@ -40,13 +51,16 @@ export default function Footer() {
                     cursor-pointer
                     flex items-center gap-1.5
                     rounded-lg
-                    bg-neutral-900
+                   
+                    bg-neutral-900 text-white
                     px-3.5 py-2
-                    text-xs font-medium text-white
+                    text-xs font-medium text-neutral-700
                     shadow-2xs
                     transition-all duration-200
-                    hover:bg-neutral-800
+                    hover:bg-neutral-50
+                    hover:border-neutral-300
                     active:scale-95
+          
                   "
                 >
                   <Mail size={14} />
@@ -82,7 +96,7 @@ export default function Footer() {
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/15pcL4Mauqh2BWsFNY42SnlnmfKSfmsew/view?usp=sharing",
-                      "_blank"
+                      "_blank",
                     )
                   }
                   className="
@@ -108,11 +122,12 @@ export default function Footer() {
           </div>
 
           {/* Bottom Footer */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
             {/* Left Info */}
             <div className="flex flex-col items-center sm:items-start">
-              <span className="text-xs font-medium text-neutral-900">© 2026 Suraj Gupta</span>
+              <span className="text-xs font-medium text-neutral-900">
+                © 2026 Suraj Gupta
+              </span>
               <span className="text-[11px] text-neutral-500 mt-0.5">
                 Full-stack + GenAI Engineer
               </span>
@@ -148,9 +163,7 @@ export default function Footer() {
                 Blog
               </a>
             </div>
-
           </div>
-
         </div>
       </div>
     </footer>
