@@ -28,7 +28,7 @@ export default function LuenArticlePage() {
             <span>•</span>
             <div className="flex items-center gap-1">
               <CalendarDays size={12} />
-              <span>May 15, 2026</span>
+              <span>Aug 15, 2026</span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1">

@@ -4,18 +4,18 @@ import Github from "./Github";
 
 export default function Footer() {
   return (
-    <footer className="w-full py-12 sm:py-16 flex justify-center mx-auto" id="contact">
+    <footer className="w-full py-12 sm:py-16  flex justify-center mx-auto" id="contact">
       <div className="w-[90%] md:w-[75%] max-w-3xl">
         <div className="flex flex-col text-neutral-900">
           
           {/* CTA Section */}
-          <div className="border border-neutral-200/80 rounded-2xl overflow-hidden pb-12 relative  bg-neutral-50/50">
+          <div className="border group cursor-pointer border-neutral-200/80 rounded-2xl overflow-hidden pb-12 relative  bg-neutral-50/50">
             {/* Background Cover Image */}
             <div className="w-full h-32 sm:h-40 absolute inset-x-0 top-0 overflow-hidden z-0">
               <img
                 src="/assets/hero.png"
                 alt="Cover"
-                className="w-full h-full object-cover object-center opacity-90"
+                className="w-full h-full object-cover object-center opacity-90 group-hover:scale-105 duration-300 ease-in-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 via-neutral-50/5 to-transparent" />
             </div>
@@ -57,8 +57,8 @@ export default function Footer() {
                     text-xs font-medium text-neutral-700
                     shadow-2xs
                     transition-all duration-200
-                    hover:bg-neutral-50
-                    hover:border-neutral-300
+                    hover:bg-neutral-800
+                    hover:border-neutral-800
                     active:scale-95
           
                   "

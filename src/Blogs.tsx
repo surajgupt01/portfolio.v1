@@ -57,7 +57,7 @@ export default function BlogSection() {
             {/* Date */}
             <div className="mt-3 flex items-center gap-1.5 text-[11px] text-neutral-400">
               <CalendarDays size={12} />
-              <span>June 1, 2026</span>
+              <span>Aug 1, 2026</span>
             </div>
           </div>
 

@@ -28,7 +28,7 @@ export default function ArticlePage() {
             <span>•</span>
             <div className="flex items-center gap-1">
               <CalendarDays size={12} />
-              <span>June 1, 2026</span>
+              <span>Aug 1, 2026</span>
             </div>
             <span>•</span>
             <div className="flex items-center gap-1">
