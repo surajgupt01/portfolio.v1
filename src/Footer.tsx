@@ -1,6 +1,7 @@
 import { Mail, FileDown, CalendarDays, Rss } from "lucide-react";
 import LinkedIn from "./LinkedIn";
 import Github from "./Github";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -135,33 +136,33 @@ export default function Footer() {
 
             {/* Right Links */}
             <div className="flex items-center gap-5 text-xs text-neutral-600">
-              <a
-                href="https://github.com/surajgupt01"
+              <Link
+                to="https://github.com/surajgupt01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 transition-colors duration-200 hover:text-neutral-900"
               >
                 <Github />
                 GitHub
-              </a>
+              </Link>
 
-              <a
-                href="https://www.linkedin.com/in/suraj-gupta-1894051ba/"
+              <Link
+                to="https://www.linkedin.com/in/suraj-gupta-1894051ba/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 transition-colors duration-200 hover:text-neutral-900"
               >
                 <LinkedIn />
                 LinkedIn
-              </a>
+              </Link>
 
-              <a
-                href="/blogs"
+              <Link
+                to="/blogs"
                 className="flex items-center gap-1.5 transition-colors duration-200 hover:text-neutral-900"
               >
                 <Rss size={14} />
                 Blog
-              </a>
+              </Link>
             </div>
           </div>
         </div>
