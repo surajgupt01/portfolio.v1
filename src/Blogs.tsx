@@ -10,27 +10,26 @@ export default function BlogSection() {
 
   return (
     <section
-      className="w-full  py-12 sm:py-16 flex  max-w-3xl  mx-auto"
+      className="w-full py-12 sm:py-16 flex max-w-3xl mx-auto transition-colors duration-300"
       id="blog"
     >
       <div className="w-full">
         {/* Section Header with "Show All" Link */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8 sm:mb-10 gap-3">
           <div className="flex flex-col items-start text-left">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-semibold mb-1.5">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 font-semibold mb-1.5">
               Thoughts & Writings
             </span>
-            <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-neutral-900">
+            <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
               Latest Articles
             </h2>
           </div>
 
           {/* Top-right "Show all blogs" action button */}
           <button
-            onClick={() => {
-              handleClick();
-            }}
-            className="cursor-pointer inline-flex items-center gap-1 text-xs font-medium text-neutral-600 transition-colors duration-200 hover:text-neutral-900 self-start sm:self-auto"
+            type="button"
+            onClick={handleClick}
+            className="cursor-pointer inline-flex items-center gap-1 text-xs font-medium text-neutral-600 dark:text-neutral-400 transition-colors duration-200 hover:text-neutral-900 dark:hover:text-neutral-100 self-start sm:self-auto"
           >
             <span>View all articles</span>
             <ArrowRight size={14} />
@@ -42,27 +41,27 @@ export default function BlogSection() {
           onClick={() => {
             navigate("/blogs/pulse-ai");
           }}
-          className="group relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-xl border border-neutral-100 bg-transparent p-5 sm:p-6 transition-all duration-300 hover:border-neutral-200 hover:shadow-2xs shadow-xs cursor-pointer"
+          className="group relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-xl border border-neutral-200/70 dark:border-neutral-800/80 bg-white/70 dark:bg-neutral-900/60 p-5 sm:p-6 transition-all duration-300 hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-xs shadow-2xs cursor-pointer"
         >
           {/* Left Content */}
           <div className="max-w-xl">
-            <h3 className="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 transition-colors duration-200 group-hover:text-neutral-600">
+            <h3 className="text-base sm:text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 transition-colors duration-200 group-hover:text-neutral-600 dark:group-hover:text-neutral-300">
               How I Built Pulse AI
             </h3>
 
-            <p className="mt-1.5 text-[11px] sm:text-xs leading-relaxed text-neutral-500">
+            <p className="mt-1.5 text-[11px] sm:text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
               Building an AI-powered ingredient analysis platform using OCR, LLMs, and modern full-stack technologies.
             </p>
 
             {/* Date */}
-            <div className="mt-3 flex items-center gap-1.5 text-[11px] text-neutral-400">
+            <div className="mt-3 flex items-center gap-1.5 text-[11px] text-neutral-400 dark:text-neutral-500">
               <CalendarDays size={12} />
               <span>Aug 1, 2026</span>
             </div>
           </div>
 
           {/* Right CTA */}
-          <div className="flex items-center gap-1 text-xs font-medium text-neutral-900 transition-colors whitespace-nowrap duration-200 group-hover:text-neutral-600 self-start sm:self-center">
+          <div className="flex items-center gap-1 text-xs font-medium text-neutral-900 dark:text-neutral-200 transition-colors whitespace-nowrap duration-200 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 self-start sm:self-center">
             <span>Read article</span>
             <ArrowRight
               size={14}

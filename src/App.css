@@ -5,3 +5,4 @@
     @apply scroll-smooth;
   }
 }
+@custom-variant dark (&:where(.dark, .dark *));

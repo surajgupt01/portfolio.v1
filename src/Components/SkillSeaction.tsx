@@ -5,18 +5,18 @@ const skillIcons: Record<string, string> = {
   "Prisma ORM": "devicon-prisma-original colored",
   MongoDB: "devicon-mongodb-plain colored",
   "Node.js": "devicon-nodejs-plain colored",
-  "Next.js": "devicon-nextjs-plain",
+  "Next.js": "devicon-nextjs-plain dark:brightness-200 dark:invert",
   Docker: "devicon-docker-plain colored",
   "CI / CD": "devicon-githubactions-plain colored",
   React: "devicon-react-plain colored",
   ReactJs: "devicon-react-plain colored",
   TailwindCSS: "devicon-tailwindcss-plain colored",
   TailwindCss: "devicon-tailwindcss-plain colored",
-  Github: "devicon-github-plain",
+  Github: "devicon-github-plain dark:brightness-200 dark:invert",
   Linux: "devicon-linux-plain",
-  "Auth.js": "devicon-authjs-plain",
-  AuthJs: "devicon-authjs-plain",
-  Express: "devicon-express-original",
+  "Auth.js": "devicon-authjs-plain dark:brightness-200 dark:invert",
+  AuthJs: "devicon-authjs-plain dark:brightness-200 dark:invert",
+  Express: "devicon-express-original dark:brightness-200 dark:invert",
   FastAPI: "devicon-fastapi-plain colored",
   "AWS S3": "devicon-amazonwebservices-plain-wordmark colored",
 };
@@ -29,8 +29,8 @@ const skills = {
 
 export default function SkillsSection() {
   return (
-    <section className="w-full max-w-4xl lg:px-6 px-3 lg:py-8 py-4 text-black">
-      <h2 className="mb-8 text-sm uppercase tracking-[0.2em] text-zinc-400">
+    <section className="w-full max-w-4xl lg:px-6 px-3 lg:py-8 py-4 text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
+      <h2 className="mb-8 text-sm uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500 font-semibold">
         Skills
       </h2>
 
@@ -40,8 +40,8 @@ export default function SkillsSection() {
             key={category}
             className="flex flex-col justify-start gap-3 md:flex-row md:items-center"
           >
-            {/* Category */}
-            <div className="w-24 shrink-0 text-[14px] font-medium leading-tight text-zinc-800">
+            {/* Category Label */}
+            <div className="w-24 shrink-0 text-[14px] font-medium leading-tight text-neutral-800 dark:text-neutral-300">
               {category}
             </div>
 
@@ -53,20 +53,22 @@ export default function SkillsSection() {
                   className="
                     flex items-center gap-2
                     rounded-xl
-                    border border-black/10
-                    bg-neutral-100
+                    border border-neutral-200/80 dark:border-neutral-800
+                    bg-neutral-100 dark:bg-neutral-900/70
                     px-3 py-1.5
-                    text-xs font-semibold
-                    text-zinc-700
+                    text-xs font-medium
+                    text-neutral-700 dark:text-neutral-300
+                    shadow-2xs
                     transition-all duration-300
                     cursor-pointer
                     hover:scale-105
                     hover:border-dashed
-                    hover:border-gray-400
+                    hover:border-neutral-400 dark:hover:border-neutral-600
+                    hover:bg-neutral-50 dark:hover:bg-neutral-800/80
                   "
                 >
                   <i
-                    className={`${skillIcons[skill]} text-sm`}
+                    className={`${skillIcons[skill] || "devicon-code-plain"} text-sm`}
                   />
 
                   <span>{skill}</span>
